@@ -1,0 +1,13 @@
+version: '2'
+services:
+  docker-php53:
+    build: .
+    image: docker-php53
+    container_name: docker-php53
+    privileged: true
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      # - /etc/localtime:/etc/localtime:ro
+      - ../html:/var/html
